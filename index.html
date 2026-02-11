@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!-- tailwind cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="./main.css">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/7e59fb41a7.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-zinc-950 text-white">
+    <h1 class="text-4xl text-center text-amber-600 my-8 font-bold">Simple Calculator</h1>
+    <main
+        class="border-5 border-amber-600 rounded-2xl p-2 max-w-120 min-w-80 mx-auto flex flex-col justify-center items-center">
+        <input class="border-2 border-amber-600 text-right text-white rounded-2xl text-5xl w-full bg-zinc-800 p-3"
+            placeholder="0" type="text" inputmode="numeric" maxlength="15"
+            oninput="this.value = this.value.replace(/[^0-9\(\)+\-*\/%\^.]/g, '')" readonly>
+        <section class="grid gird-rows-5 grid-cols-4 gap-1.5 rounded-2xl mt-2 w-full">
+            <div
+                class="bg-zinc-700 text-gray-400 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80">
+                &lpar;</div>
+            <div
+                class="bg-zinc-700 text-gray-400 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80">
+                &rpar;</div>
+            <div
+                class="bg-zinc-700 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80">
+                <i class="text-gray-400 fa-solid fa-delete-left"></i>
+            </div>
+            <div
+                class="bg-zinc-700 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80">
+                <i class="text-amber-600 fa-solid fa-divide"></i>
+            </div>
+            <div
+                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80">
+                7</div>
+            <div
+                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80">
+                8</div>
+            <div
+                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80">
+                9</div>
+            <div
+                class="bg-zinc-700 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80">
+                <i class="text-amber-600 fa-solid fa-xmark"></i>
+            </div>
+            <div
+                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80">
+                4</div>
+            <div
+                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80">
+                5</div>
+            <div
+                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80">
+                6</div>
+            <div
+                class="bg-zinc-700 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80">
+                <i class="text-amber-600 fa-solid fa-minus"></i>
+            </div>
+            <div
+                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80">
+                1</div>
+            <div
+                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80">
+                2</div>
+            <div
+                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80">
+                3</div>
+            <div
+                class="bg-zinc-700 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80">
+                <i class="text-amber-600 fa-solid fa-plus"></i>
+            </div>
+            <div
+                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80">
+                0</div>
+            <div
+                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80">
+                .</div>
+            <div
+                class="bg-zinc-900 text-gray-400 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80">
+                exp</div>
+            <div
+                class="bg-amber-600 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80">
+                <i class="fa-solid fa-equals"></i>
+            </div>
+        </section>
+    </main>
+</body>
+
+<script>
+
+</script>
+
+</html>
