@@ -12,12 +12,11 @@ const clearScreen = () => {
 // calc output
 const calcResult = () => {
     try {
-        result.value = "" ? result.value = "" : result.value = eval(result.value);
+        result.value == "" ? result.value = "" : result.value = eval(result.value);
     }
     catch (err) {
         result.value = "";
-        result.placeholder = "Invalid Expression!"
-        alert(result.value);
+        result.placeholder = "Invalid Expression!";
     }
 }
 

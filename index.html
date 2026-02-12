@@ -17,73 +17,79 @@
     <h1 class="text-4xl text-center text-amber-600 my-8 font-bold">Simple Calculator</h1>
     <main
         class="border-5 border-amber-600 rounded-2xl p-2 max-w-120 min-w-80 mx-auto flex flex-col justify-center items-center">
-        <input id="result" class="border-2 border-amber-600 text-right text-white rounded-2xl text-5xl w-full bg-zinc-800 p-3"
-            placeholder="0" type="text" inputmode="numeric" maxlength="15" readonly>
+        <input id="result"
+            class="border-2 border-amber-600 text-right text-white rounded-2xl text-5xl w-full bg-zinc-800 p-3"
+            placeholder="0" type="text" inputmode="numeric" maxlength="25" readonly>
         <section class="grid gird-rows-5 grid-cols-4 gap-1.5 rounded-2xl mt-2 w-full">
             <div id="clear" onclick="clearScreen()"
-                class="bg-zinc-700 text-gray-400 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:border active:border-amber-600">
+                class="bg-zinc-700 text-gray-400 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:ring-2 active:ring-amber-600">
                 AC</div>
-            <div id="bracket" onclick="calcDisplay('()')"
-                class="bg-zinc-700 text-gray-400 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:border active:border-amber-600">
-                &lpar;&rpar;</div>
+            <div class="flex flex-row gap-1.5">
+                <div id="left-bracket" onclick="calcDisplay('(')"
+                    class="flex-1 bg-zinc-700 text-gray-400 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:ring-4 active:ring-amber-600">
+                    &lpar;</div>
+                <div id="right-bracket" onclick="calcDisplay(')')"
+                    class="flex-1 bg-zinc-700 text-gray-400 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:ring-4 active:ring-amber-600">
+                    &rpar;</div>
+            </div>
             <div id="delete" onclick="delCalcScreen()"
-                class="bg-zinc-700 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:border active:border-amber-600">
+                class="bg-zinc-700 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:ring-2 active:ring-amber-600">
                 <i class="text-gray-400 fa-solid fa-delete-left"></i>
             </div>
             <div id="divide" onclick="calcDisplay('/')"
-                class="bg-zinc-700 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:border active:border-amber-600">
+                class="bg-zinc-700 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:ring-2 active:ring-amber-600">
                 <i class="text-amber-600 fa-solid fa-divide"></i>
             </div>
             <div id="seven" onclick="calcDisplay('7')"
-                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:border active:border-amber-600">
+                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:ring-2 active:ring-amber-600">
                 7</div>
             <div id="eight" onclick="calcDisplay('8')"
-                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:border active:border-amber-600">
+                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:ring-2 active:ring-amber-600">
                 8</div>
             <div id="nine" onclick="calcDisplay('9')"
-                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:border active:border-amber-600">
+                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:ring-2 active:ring-amber-600">
                 9</div>
             <div id="multiply" onclick="calcDisplay('*')"
-                class="bg-zinc-700 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:border active:border-amber-600">
+                class="bg-zinc-700 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:ring-2 active:ring-amber-600">
                 <i class="text-amber-600 fa-solid fa-xmark"></i>
             </div>
             <div id="four" onclick="calcDisplay('4')"
-                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:border active:border-amber-600">
+                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:ring-2 active:ring-amber-600">
                 4</div>
             <div id="five" onclick="calcDisplay('5')"
-                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:border active:border-amber-600">
+                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:ring-2 active:ring-amber-600">
                 5</div>
             <div id="six" onclick="calcDisplay('6')"
-                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:border active:border-amber-600">
+                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:ring-2 active:ring-amber-600">
                 6</div>
             <div id="minus" onclick="calcDisplay('-')"
-                class="bg-zinc-700 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:border active:border-amber-600">
+                class="bg-zinc-700 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:ring-2 active:ring-amber-600">
                 <i class="text-amber-600 fa-solid fa-minus"></i>
             </div>
             <div id="one" onclick="calcDisplay('1')"
-                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:border active:border-amber-600">
+                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:ring-2 active:ring-amber-600">
                 1</div>
             <div id="two" onclick="calcDisplay('2')"
-                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:border active:border-amber-600">
+                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:ring-2 active:ring-amber-600">
                 2</div>
             <div id="three" onclick="calcDisplay('3')"
-                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:border active:border-amber-600">
+                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:ring-2 active:ring-amber-600">
                 3</div>
             <div id="plus" onclick="calcDisplay('+')"
-                class="bg-zinc-700 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:border active:border-amber-600">
+                class="bg-zinc-700 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:ring-2 active:ring-amber-600">
                 <i class="text-amber-600 fa-solid fa-plus"></i>
             </div>
             <div id="zero" onclick="calcDisplay('0')"
-                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:border active:border-amber-600">
+                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:ring-2 active:ring-amber-600">
                 0</div>
             <div id="decimal" onclick="calcDisplay('.')"
-                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:border active:border-amber-600">
+                class="bg-zinc-900 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:ring-2 active:ring-amber-600">
                 .</div>
-            <div id="exp" onclick="calcDisplay('^')"
-                class="bg-zinc-900 text-gray-400 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:border active:border-amber-600">
+            <div id="exp" onclick="calcDisplay('**')"
+                class="bg-zinc-900 text-gray-400 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:ring-2 active:ring-amber-600">
                 exp</div>
             <div id="equal" onclick="calcResult()"
-                class="bg-amber-600 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:border active:border-amber-600">
+                class="bg-amber-600 py-5 flex items-center justify-center hover:boder text-2xl font-semibold rounded-2xl hover:opacity-80 active:ring-2 active:ring-slate-50">
                 <i class="fa-solid fa-equals"></i>
             </div>
         </section>
@@ -91,4 +97,5 @@
 </body>
 <!-- external js -->
 <script src="./main.js"></script>
+
 </html>
